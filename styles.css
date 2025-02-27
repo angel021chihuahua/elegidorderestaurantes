@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.screen {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+.big-btn {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #007BFF;
+  color: #fff;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.big-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #6c757d;
+  color: #fff;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #5a6268;
+  transform: scale(1.05);
+}
+
+#filterContainer {
+  display: flex;
+  gap: 10px;
+  margin: 1rem;
+}
+
+.filter-btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 2px solid #007BFF;
+  border-radius: 6px;
+  background: #fff;
+  color: #007BFF;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.filter-btn.selected {
+  background: #007BFF;
+  color: #fff;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+/* Restaurant item en ajustes */
+.restaurant-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.restaurant-item input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.restaurant-item select {
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Pantalla de Partido */
+#matchContainer {
+  display: flex;
+  gap: 1rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.card {
+  background: #f8f9fa;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  background: #e2e6ea;
+  transform: scale(1.03);
+}
+
+/* Ajuste según orientación */
+@media (orientation: portrait) {
+  #matchContainer {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) {
+  #matchContainer {
+    flex-direction: row;
+  }
+}
