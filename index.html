@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneo de Restaurantes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page with lists and text.</p>
+  <!-- Pantalla Principal -->
+  <div id="mainScreen" class="screen fade-in">
+    <button id="elegirBtn" class="big-btn">Elegir</button>
+    <div id="filterContainer">
+      <button class="filter-btn selected" data-filter=">10">&gt;$10</button>
+      <button class="filter-btn selected" data-filter="10-20">$10‑20</button>
+      <button class="filter-btn selected" data-filter="20+">$20+</button>
+    </div>
+    <button id="opcionesBtn" class="btn">Opciones</button>
+  </div>
 
-    <h2>My Favorite Things</h2>
-    <ul>
-        <li>Watching YouTube</li>
-        <li>Playing Roblox</li>
-        <li>Eating Pepperoni Pizza</li>
-    </ul>
+  <!-- Pantalla de Opciones (Ajustes) -->
+  <div id="opcionesScreen" class="screen fade-in" style="display: none;">
+    <h2>Configurar Restaurantes</h2>
+    <div id="restaurantList">
+      <!-- Se generarán aquí los inputs para cada restaurante con su select -->
+    </div>
+    <div class="btn-group">
+      <button id="addRestaurantBtn" class="btn">+</button>
+      <button id="removeRestaurantBtn" class="btn">-</button>
+    </div>
+    <button id="opcionesBackBtn" class="btn">Volver</button>
+  </div>
 
-    <h2>My To-Do List</h2>
-    <ol>
-        <li>Finish homework</li>
-        <li>Walk my dogs</li>
-        <li>Relax and watch videos</li>
-    </ol>
+  <!-- Pantalla del Partido (Torneo) -->
+  <div id="matchScreen" class="screen fade-in" style="display: none;">
+    <div id="matchContainer">
+      <div class="card" id="card1"></div>
+      <div class="card" id="card2"></div>
+    </div>
+  </div>
 
-    <h2>Fun Fact</h2>
-    <p>Did you know? Chihuahuas are one of the smallest dog breeds, but they have a big personality!</p>
+  <!-- Pantalla de Ganador -->
+  <div id="winnerScreen" class="screen fade-in" style="display: none;">
+    <h2>¡Ganador!</h2>
+    <div id="winnerName"></div>
+    <button id="resetBtn" class="btn">Reiniciar</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
